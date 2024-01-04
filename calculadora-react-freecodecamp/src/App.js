@@ -3,6 +3,7 @@ import "./App.css";
 import Boton from "./components/Boton";
 import Pantalla from "./components/Pantalla";
 import BotonClear from "./components/BotonClear";
+import Logo from "./components/Logo";
 import { useState } from "react"; // este es un hook llamado useState
 import { evaluate } from "mathjs";
 
@@ -36,14 +37,6 @@ function App() {
     }
   };
 
-  // const calcularResultado = () => {
-  //   if (input) {
-  //     setInput(evaluate(input));
-  //   } else {
-  //     alert("Por favor ingrese valores para realizar los cálculos.");
-  //   }
-  // };
-
   return (
     <div className="App">
       {/* <div className="freecode-logo-contenedor">
@@ -53,6 +46,7 @@ function App() {
           alt="Logo de freeCodeCamp"
         />
       </div> */}
+      <Logo />
       <div className="contenedor-calculadora">
         {/* componentes dentro del contenedor principal -  PANTALLA, BOTON, BOTONCLEAR */}
         {/*  pantalla de calculadora */}
