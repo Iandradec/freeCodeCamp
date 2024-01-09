@@ -1,21 +1,21 @@
-import React, { useState, useContext } from 'react';
-import { useLocation } from 'react-router-dom';
-import Sticky from 'react-stickynode';
-import { IoIosClose } from 'react-icons/io';
-import { Button, Drawer } from 'antd';
-import Logo from 'components/UI/Logo/Logo';
-import Text from 'components/UI/Text/Text';
-import TextLink from 'components/UI/TextLink/TextLink';
-import Navbar from 'components/Navbar/Navbar';
-import { AuthContext } from 'context/AuthProvider';
-import { LayoutContext } from 'context/LayoutProvider';
-import useWindowSize from 'library/hooks/useWindowSize';
-import { AGENT_PROFILE_PAGE } from 'settings/constant';
-import AuthMenu from './AuthMenu';
-import MainMenu from './MainMenu';
-import MobileMenu from './MobileMenu';
-import ProfileMenu from './ProfileMenu';
-import NavbarSearch from './NavbarSearch';
+import React, { useState, useContext } from "react";
+import { useLocation } from "react-router-dom";
+import Sticky from "react-stickynode";
+import { IoIosClose } from "react-icons/io";
+import { Button, Drawer } from "antd";
+import Logo from "components/UI/Logo/Logo";
+import Text from "components/UI/Text/Text";
+import TextLink from "components/UI/TextLink/TextLink";
+import Navbar from "components/Navbar/Navbar";
+import { AuthContext } from "context/AuthProvider";
+import { LayoutContext } from "context/LayoutProvider";
+import useWindowSize from "library/hooks/useWindowSize";
+import { AGENT_PROFILE_PAGE } from "settings/constant";
+import AuthMenu from "./AuthMenu";
+import MainMenu from "./MainMenu";
+import MobileMenu from "./MobileMenu";
+import ProfileMenu from "./ProfileMenu";
+import NavbarSearch from "./NavbarSearch";
 import HeaderWrapper, {
   MobileNavbar,
   CloseDrawer,
@@ -23,7 +23,7 @@ import HeaderWrapper, {
   AvatarImage,
   AvatarInfo,
   LogoArea,
-} from './Header.style';
+} from "./Header.style";
 
 const avatarImg = `http://s3.amazonaws.com/redqteam.com/isomorphic-reloaded-image/profilepic.png`;
 const LogoIcon = () => (
@@ -47,25 +47,25 @@ export default function Header() {
   const sidebarHandler = () => {
     setState(!state);
   };
-  const headerType = location.pathname === '/' ? 'transparent' : 'default';
+  const headerType = location.pathname === "/" ? "transparent" : "default";
 
   return (
     <HeaderWrapper>
       <Sticky
-        top={headerType === 'transparent' ? -1 : 0}
+        top={headerType === "transparent" ? -1 : 0}
         innerZ={10001}
         activeClass="isHeaderSticky"
       >
         {width > 991 ? (
-          <Navbar
+          <Navbar 
             logo={
               <>
-                {headerType === 'transparent' && <LogoIcon />}
-                <Logo
+                {headerType === "transparent" && <LogoIcon />}
+                <Logo 
                   withLink
                   linkTo="/"
                   src="/images/logo-alt.svg"
-                  title="TripFinder."
+                  title="Ivan Andrade C."
                 />
               </>
             }
@@ -83,18 +83,18 @@ export default function Header() {
           <MobileNavbar className={headerType}>
             <LogoArea>
               <>
-                {headerType === 'transparent' && <LogoIcon />}
+                {headerType === "transparent" && <LogoIcon />}
                 <Logo
                   withLink
                   linkTo="/"
                   src="/images/logo-alt.svg"
-                  title="TripFinder."
+                  title="Ivan Andrade C.."
                 />
               </>
               <NavbarSearch />
             </LogoArea>
             <Button
-              className={`hamburg-btn ${state ? 'active' : ''}`}
+              className={`hamburg-btn ${state ? "active" : ""}`}
               onClick={sidebarHandler}
             >
               <span />

@@ -1,29 +1,33 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+// Text.js con comentarios
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 import {
   fontFamily,
   fontWeight,
   textAlign,
   lineHeight,
   letterSpacing,
-} from 'styled-system';
-import { base, themed } from '../Base';
+} from "styled-system";
+import { base, themed } from "../Base";
 
-const TextWrapper = styled('p')(
+// Define un componente de estilo para los párrafos de texto, aplicando varias propiedades de estilo.
+const TextWrapper = styled("p")(
   base,
   fontFamily,
   fontWeight,
   textAlign,
   lineHeight,
   letterSpacing,
-  themed('Text')
+  themed("Text")
 );
 
+// Componente funcional Text que renderiza el contenido dentro de un TextWrapper.
 const Text = ({ content, ...props }) => (
   <TextWrapper {...props}>{content}</TextWrapper>
 );
 
+// Define los tipos de propiedades esperados para Text, especificando que content es una cadena de texto.
 Text.propTypes = {
   content: PropTypes.string,
   as: PropTypes.string,
@@ -65,8 +69,9 @@ Text.propTypes = {
   ...base.propTypes,
 };
 
+// Establece los valores predeterminados para algunas propiedades, como el tipo de elemento y el margen.
 Text.defaultProps = {
-  as: 'p',
+  as: "p",
   m: 0,
 };
 

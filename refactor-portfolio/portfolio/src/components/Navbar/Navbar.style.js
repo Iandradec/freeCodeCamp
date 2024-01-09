@@ -1,15 +1,17 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
+// controla la barra de navegacion
 const NavbarWrapper = styled.nav`
   display: none;
   width: 100%;
-  padding: 0 25px;
+  // padding: 0 25px;
+  padding: 0 370px;
   min-height: 82px;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid ${themeGet('border.3', '#E6E6E6')};
-  background-color: ${themeGet('color.1', '#ffffff')};
+  border-bottom: 1px solid ${themeGet("border.3", "#E6E6E6")};
+  background-color: ${themeGet("color.1", "#ffffff")};
   @media (min-width: 991px) {
     display: flex;
   }
@@ -30,20 +32,20 @@ const NavbarWrapper = styled.nav`
         &.ant-menu-item-selected {
           background-color: transparent;
           a {
-            color: ${themeGet('color.1', '#ffffff')};
+            color: ${themeGet("color.1", "#ffffff")};
             &.active {
               border-bottom: 0;
             }
           }
         }
         a {
-          color: ${themeGet('color.1', '#ffffff')};
+          color: ${themeGet("color.1", "#ffffff")};
         }
       }
       &.dropdown-menu {
         li {
           a {
-            color: ${themeGet('text.0', '#2C2C2C')};
+            color: ${themeGet("text.0", "#2C2C2C")};
           }
         }
       }
@@ -114,7 +116,7 @@ export const AvatarWrapper = styled.div`
         visibility: visible;
       }
       li {
-        color: ${themeGet('text.0', '#2C2C2C')};
+        color: ${themeGet("text.0", "#2C2C2C")};
         font-size: 15px;
         line-height: 18px;
         font-weight: 400;
@@ -128,14 +130,14 @@ export const AvatarWrapper = styled.div`
         a {
           display: block;
           padding: 8px 16px;
-          color: ${themeGet('text.0', '#2C2C2C')};
+          color: ${themeGet("text.0", "#2C2C2C")};
           transition: color 0.2s ease-in-out;
           &:hover {
-            color: ${themeGet('primary.0', '#008489')};
+            color: ${themeGet("primary.0", "#008489")};
           }
           &.active {
             font-weight: 700;
-            color: ${themeGet('primary.0', '#008489')};
+            color: ${themeGet("primary.0", "#008489")};
           }
         }
         button {
@@ -148,7 +150,7 @@ export const AvatarWrapper = styled.div`
           background-color: transparent;
           transition: color 0.2s ease-in-out;
           &:hover {
-            color: ${themeGet('primary.0', '#008489')};
+            color: ${themeGet("primary.0", "#008489")};
           }
           &:focus {
             outline: none;
@@ -172,7 +174,7 @@ export const MenuWrapper = styled.div`
       padding: 0;
       height: auto;
       margin-bottom: 0 !important;
-      color: ${themeGet('text.0', '#2C2C2C')};
+      color: ${themeGet("text.0", "#2C2C2C")};
       font-size: 15px;
       line-height: 18px;
       font-weight: 400;
@@ -194,19 +196,19 @@ export const MenuWrapper = styled.div`
       a {
         display: block;
         padding: 30px 16px;
-        color: ${themeGet('text.0', '#2C2C2C')};
+        color: ${themeGet("text.0", "#2C2C2C")};
         transition: color 0.2s ease-in-out;
         @media (max-width: 1200px) {
           padding: 30px 10px;
         }
         &:hover {
-          color: ${themeGet('primary.0', '#008489')};
+          color: ${themeGet("primary.0", "#008489")};
         }
       }
       &.ant-menu-item-selected a.active {
         font-weight: 700;
-        color: ${themeGet('primary.0', '#008489')};
-        border-bottom: 3px solid ${themeGet('primary.0', '#008489')};
+        color: ${themeGet("primary.0", "#008489")};
+        border-bottom: 3px solid ${themeGet("primary.0", "#008489")};
       }
     }
   }
@@ -228,7 +230,7 @@ export const AuthWrapper = styled.div`
       padding: 0;
       height: auto;
       margin-bottom: 0 !important;
-      color: ${themeGet('text.0', '#2C2C2C')};
+      color: ${themeGet("text.0", "#2C2C2C")};
       font-size: 15px;
       line-height: 18px;
       font-weight: 400;
@@ -244,17 +246,17 @@ export const AuthWrapper = styled.div`
         min-width: 78px;
         min-height: 38px;
         border-radius: 3px;
-        color: ${themeGet('text.0', '#2C2C2C')};
+        color: ${themeGet("text.0", "#2C2C2C")};
         transition: color 0.2s ease-in-out;
         &:hover {
-          color: ${themeGet('primary.0', '#008489')};
+          color: ${themeGet("primary.0", "#008489")};
         }
       }
 
       &:last-child {
         a {
-          color: ${themeGet('color.1', '#ffffff')};
-          background-color: ${themeGet('primary.0', '#008489')};
+          color: ${themeGet("color.1", "#ffffff")};
+          background-color: ${themeGet("primary.0", "#008489")};
           transition: opacity 0.2s ease;
 
           &:hover {

@@ -11,19 +11,19 @@ import {
 
 const menuItems = [
   {
-    label: <NavLink to={HOME_PAGE}>Hotels</NavLink>,
+    label: <NavLink to={HOME_PAGE}>Home</NavLink>,
     key: 'menu-1',
   },
   {
-    label: <NavLink to={LISTING_POSTS_PAGE}>Listing</NavLink>,
+    label: <NavLink to={LISTING_POSTS_PAGE}>Resume</NavLink>,
     key: 'menu-2',
   },
   {
-    label: <NavLink to={AGENT_PROFILE_PAGE}>Agent</NavLink>,
+    label: <NavLink to={AGENT_PROFILE_PAGE}>Portfolio</NavLink>,
     key: 'menu-3',
   },
   {
-    label: <NavLink to={PRICING_PLAN_PAGE}>Pricing</NavLink>,
+    label: <NavLink to={PRICING_PLAN_PAGE}>Contact</NavLink>,
     key: 'menu-4',
   },
 ];

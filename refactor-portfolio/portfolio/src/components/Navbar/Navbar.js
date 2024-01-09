@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import NavbarWrapper, {
   Container,
   LogoArea,
@@ -7,7 +7,7 @@ import NavbarWrapper, {
   AvatarWrapper,
   AuthWrapper,
   MenuWrapper,
-} from './Navbar.style';
+} from "./Navbar.style";
 
 const Navbar = ({
   className,
@@ -22,7 +22,7 @@ const Navbar = ({
   location,
   searchVisibility,
 }) => {
-  const addAllClasses = ['navbar'];
+  const addAllClasses = ["navbar"];
   if (className) {
     addAllClasses.push(className);
   }
@@ -31,12 +31,12 @@ const Navbar = ({
   }
 
   return (
-    <NavbarWrapper className={addAllClasses.join(' ')}>
+    <NavbarWrapper className={addAllClasses.join(" ")}>
       <Container>
         {logo || searchVisibility ? (
           <LogoArea>
             {logo}
-            {!searchVisibility && location.pathname === '/'
+            {!searchVisibility && location.pathname === "/"
               ? null
               : searchComponent}
           </LogoArea>
@@ -64,7 +64,7 @@ Navbar.propTypes = {
   avatar: PropTypes.element,
   authMenu: PropTypes.element,
   isLogin: PropTypes.bool,
-  headerType: PropTypes.oneOf(['transparent', 'default']),
+  headerType: PropTypes.oneOf(["transparent", "default"]),
 };
 
 export default Navbar;

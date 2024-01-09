@@ -55,7 +55,7 @@ export default function Layout() {
           location.pathname ===
             `${AGENT_ACCOUNT_SETTINGS_PAGE + AGENT_PASSWORD_CHANGE_PAGE}` ||
           location.pathname === AGENT_ACCOUNT_SETTINGS_PAGE ? (
-            <div style={{ height: '33px' }} />
+            <div style={{ height: '3px' }} />
           ) : (
             <Fragment>
               <Footer />

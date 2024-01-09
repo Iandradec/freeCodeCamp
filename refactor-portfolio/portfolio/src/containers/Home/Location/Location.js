@@ -1,20 +1,23 @@
-import React from 'react';
-import { IoIosArrowBack } from 'react-icons/io';
-import { IoIosArrowForward } from 'react-icons/io';
-import Loader from 'components/Loader/Loader';
-import Container from 'components/UI/Container/Container';
-import Heading from 'components/UI/Heading/Heading';
-import TextLink from 'components/UI/TextLink/TextLink';
-import SectionTitle from 'components/SectionTitle/SectionTitle';
-import ImageCard from 'components/ImageCard/ImageCard';
+import React from "react";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
+import Loader from "components/Loader/Loader";
+import Container from "components/UI/Container/Container";
+import Heading from "components/UI/Heading/Heading";
+import TextLink from "components/UI/TextLink/TextLink";
+import SectionTitle from "components/SectionTitle/SectionTitle";
+import ImageCard from "components/ImageCard/ImageCard";
+// import GlideCarousel, {
+//   GlideSlide,
+// } from 'components/UI/GlideCarousel/GlideCarousel';
 import GlideCarousel, {
   GlideSlide,
-} from 'components/UI/GlideCarousel/GlideCarousel';
-import useDataApi from 'library/hooks/useDataApi';
-import { LISTING_POSTS_PAGE } from 'settings/constant';
-import LocationWrapper, { CarouselSection } from './Location.style';
+} from "components/UI/GlideCarousel/GlideCarousel";
+import useDataApi from "library/hooks/useDataApi";
+import { LISTING_POSTS_PAGE } from "settings/constant";
+import LocationWrapper, { CarouselSection } from "./Location.style";
 const carouselOptions = {
-  type: 'carousel',
+  type: "carousel",
   perView: 5,
   gap: 30,
   hoverpause: true,
@@ -42,7 +45,7 @@ const carouselOptions = {
 };
 
 const LocationGrid = () => {
-  const { data } = useDataApi('/data/location.json');
+  const { data } = useDataApi("/data/location.json");
 
   return (
     <LocationWrapper>
@@ -60,7 +63,7 @@ const LocationGrid = () => {
               nextButton={<IoIosArrowForward />}
               options={carouselOptions}
             >
-              <>
+              {/* <>
                 {data.map((post, index) => (
                   <GlideSlide key={index}>
                     <ImageCard
@@ -71,7 +74,7 @@ const LocationGrid = () => {
                     />
                   </GlideSlide>
                 ))}
-              </>
+              </> */}
             </GlideCarousel>
           ) : (
             <Loader />

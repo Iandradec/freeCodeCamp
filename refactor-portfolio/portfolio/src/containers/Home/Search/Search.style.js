@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 const BannerWrapper = styled.div`
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background-color: ${themeGet('color.1', '#ffffff')};
+  background-color: ${themeGet("color.1", "#ffffff")};
 
   @media (max-width: 991px) {
     > div {
@@ -49,14 +49,14 @@ const BannerWrapper = styled.div`
   .glide__bullet {
     width: 7px;
     height: 7px;
-    background-color: ${themeGet('color.1', '#ffffff')};
+    background-color: ${themeGet("color.1", "#ffffff")};
     transition: width 0.3s ease;
   }
 
   .glide__bullet--active {
     width: 25px;
     border-radius: 8px;
-    background-color: ${themeGet('color.1', '#ffffff')};
+    background-color: ${themeGet("color.1", "#ffffff")};
   }
 
   > div {
@@ -70,7 +70,7 @@ const BannerWrapper = styled.div`
 
   &:after {
     display: block;
-    content: '';
+    content: "";
     width: 100%;
     height: 60%;
     position: absolute;
@@ -85,7 +85,7 @@ export const SearchWrapper = styled.div`
   width: calc(100% - 60px);
   padding: 28px 30px 30px;
   border-radius: 6px;
-  background-color: ${themeGet('color.1', '#ffffff')};
+  background-color: ${themeGet("color.1", "#ffffff")};
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
   position: absolute;
   bottom: 81px;
@@ -117,11 +117,55 @@ export const SearchWrapper = styled.div`
   }
 `;
 
+export const DashboardWrapper = styled.div`
+
+  width: calc(100% - 30%);
+  padding: 28px 30px 30px;
+  border-radius: 6px;
+  background-color: ${themeGet("color.1", "#ffffff")};
+  // box-shadow: 0 1px 20px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  // bottom: 81px;
+  top: 50%; // Positions the top edge of the element in the center of the parent
+  left: 50%; // Positions the left edge of the element in the center of the parent
+  transform: translate(
+    -50%,
+    -50%
+  ); // Transforms the element back by half its width and height
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0);
+
+  @media (min-width: 569px) and (max-width: 991px) {
+    width: 414px;
+    left: 30px;
+  }
+
+  @media (max-width: 480px) {
+    width: calc(100% - 30px);
+    padding: 15px;
+    left: 15px;
+    // transform: translate(-50%, -50%);
+    > p {
+      display: none;
+    }
+  }
+
+  > div {
+    @media (min-width: 481px) {
+      margin-top: 30px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+`;
+
 export const FormWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-color: ${themeGet('color.2', '#F7F7F7')};
+  background-color: ${themeGet("color.2", "#F7F7F7")};
   border-radius: 3px 0 0 3px;
   min-height: 60px;
 
@@ -134,11 +178,11 @@ export const FormWrapper = styled.div`
   }
 
   /* submit button style */
-  button[type='submit'].ant-btn {
+  button[type="submit"].ant-btn {
     min-width: 157px;
     height: 60px;
-    color: ${themeGet('color.1', '#ffffff')};
-    background-color: ${themeGet('primary.0', '#008489')};
+    color: ${themeGet("color.1", "#ffffff")};
+    background-color: ${themeGet("primary.0", "#008489")};
     border-radius: 0 3px 3px 0;
     border: 0;
     box-shadow: none;
@@ -186,7 +230,7 @@ export const ComponentWrapper = styled.div`
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       width: 1px;
       height: 20px;
       display: inline-block;
@@ -194,7 +238,7 @@ export const ComponentWrapper = styled.div`
       top: calc(50% - 10px);
       right: 0;
       left: auto;
-      background-color: ${themeGet('border.3', '#E6E6E6')};
+      background-color: ${themeGet("border.3", "#E6E6E6")};
     }
 
     @media (max-width: 991px) {
@@ -222,7 +266,7 @@ export const ComponentWrapper = styled.div`
       height: 60px;
       padding: 0 30px 0 40px;
       background: transparent;
-      color: ${themeGet('text.0', '#2C2C2C')};
+      color: ${themeGet("text.0", "#2C2C2C")};
 
       @media (max-width: 480px) {
         height: 47px;
@@ -236,7 +280,7 @@ export const ComponentWrapper = styled.div`
       }
 
       &::placeholder {
-        color: ${themeGet('text.0', '#2C2C2C')};
+        color: ${themeGet("text.0", "#2C2C2C")};
       }
     }
   }
@@ -302,7 +346,7 @@ export const ComponentWrapper = styled.div`
           .DateInput_input {
             padding: 0;
             font-weight: 400;
-            color: ${themeGet('text.0', '#2C2C2C')};
+            color: ${themeGet("text.0", "#2C2C2C")};
             background: transparent;
 
             &.DateInput_input__focused {
@@ -310,7 +354,7 @@ export const ComponentWrapper = styled.div`
             }
 
             &::placeholder {
-              color: ${themeGet('text.0', '#2C2C2C')};
+              color: ${themeGet("text.0", "#2C2C2C")};
             }
           }
         }
@@ -360,7 +404,7 @@ export const ComponentWrapper = styled.div`
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       width: 1px;
       height: 20px;
       display: inline-block;
@@ -369,7 +413,7 @@ export const ComponentWrapper = styled.div`
       right: auto;
       left: 0;
       z-index: 1;
-      background-color: ${themeGet('border.3', '#E6E6E6')};
+      background-color: ${themeGet("border.3", "#E6E6E6")};
 
       @media (max-width: 991px) {
         top: 0;
@@ -400,8 +444,8 @@ export const ComponentWrapper = styled.div`
         box-shadow: none;
         font-weight: 400;
         font-size: 15px;
-        color: ${themeGet('text.0', '#2C2C2C')};
-        background-color: ${themeGet('color.2', '#F7F7F7')};
+        color: ${themeGet("text.0", "#2C2C2C")};
+        background-color: ${themeGet("color.2", "#F7F7F7")};
 
         @media (max-width: 991px) {
           text-align: left;
@@ -456,7 +500,7 @@ export const ComponentWrapper = styled.div`
     &.user-friends {
       left: 15px;
       right: auto;
-      fill: ${themeGet('primary.0', '#008489')};
+      fill: ${themeGet("primary.0", "#008489")};
     }
 
     &.calendar {
@@ -478,7 +522,7 @@ export const ComponentWrapper = styled.div`
     &.caret-down {
       right: 12px;
       left: auto;
-      fill: ${themeGet('text.1', '#909090')};
+      fill: ${themeGet("text.1", "#909090")};
 
       @media (max-width: 991px) {
         right: 20px;
@@ -497,7 +541,7 @@ export const RoomGuestWrapper = styled.div`
   strong {
     font-size: 15px;
     font-weight: 400;
-    color: ${themeGet('text.0', '#2C2C2C')};
+    color: ${themeGet("text.0", "#2C2C2C")};
   }
 `;
 
