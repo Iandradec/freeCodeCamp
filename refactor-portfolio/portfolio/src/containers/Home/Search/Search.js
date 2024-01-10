@@ -17,17 +17,20 @@ const SearchArea = ({ searchTitleStyle, searchDescriptionStyle }) => {
       {/* // GlideCarousel: Componente de carrusel para imágenes */}
       <GlideCarousel>
         <img
-          src="/images/banner/10.jpeg"
+          // src="/images/banner/10.jpeg"
+          // src="/images/banner/19.jpg"
+          src="/images/banner/17.jpg"
+          // src="/images/banner/21.png"
           alt="Background"
           style={{ width: "100%", height: "auto" }}
         />
       </GlideCarousel>
 
       {/* // Container: Contenedor para los elementos de texto y formulario */}
-      <Container>
+      <Container style={{ border: "2px solid black" }}>
         {/* // SearchWrapper: Contenedor de estilo para el área de búsqueda */}
         {/* <SearchWrapper> */}
-        <DashboardWrapper>
+        <DashboardWrapper style={{ border: "2px solid white" }}>
           {/* // Heading: Componente de encabezado para título */}
           <Heading
             style={{ marginBottom: "50px", fontWeight: "700" }}
@@ -68,6 +71,7 @@ SearchArea.defaultProps = {
   searchTitleStyle: {
     color: "#FFFFFF",
     // color: "#2C2C2C",
+    // color: "#06488E",
     fontSize: ["20px", "24px", "60px"],
     fontFamily: "Montserrat",
     textAlign: "center",
@@ -78,7 +82,7 @@ SearchArea.defaultProps = {
     mb: "9px",
   },
   searchDescriptionStyle: {
-    // color: "#1d3c91",
+    // color: "#06488E",
     color: "#FFFFFF",
     fontSize: "30px",
 

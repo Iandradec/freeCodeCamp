@@ -6,6 +6,7 @@ const BannerWrapper = styled.div`
   min-height: 100vh;
   position: relative;
   background-color: ${themeGet("color.1", "#ffffff")};
+  // background-color: ${themeGet("color.1", "##2E2E2E")};
 
   @media (max-width: 991px) {
     > div {
@@ -118,7 +119,17 @@ export const SearchWrapper = styled.div`
 `;
 
 export const DashboardWrapper = styled.div`
-
+  // en el caso que quiera usar el otro estilo
+  // width: calc(100% - 60px);
+  // padding: 28px 30px 20px;
+  // border-radius: 6px;
+  // // background-color: ${themeGet("color.1", "#ffffff")};
+  // background-color: rgba(255, 255, 255, 0);
+  // box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
+  // position: absolute;
+  // bottom: 81px;
+  // z-index: 1;
+  ///////////////////////////////////////////////
   width: calc(100% - 30%);
   padding: 28px 30px 30px;
   border-radius: 6px;
