@@ -119,17 +119,6 @@ export const SearchWrapper = styled.div`
 `;
 
 export const DashboardWrapper = styled.div`
-  // en el caso que quiera usar el otro estilo
-  // width: calc(100% - 60px);
-  // padding: 28px 30px 20px;
-  // border-radius: 6px;
-  // // background-color: ${themeGet("color.1", "#ffffff")};
-  // background-color: rgba(255, 255, 255, 0);
-  // box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
-  // position: absolute;
-  // bottom: 81px;
-  // z-index: 1;
-  ///////////////////////////////////////////////
   width: calc(100% - 30%);
   padding: 28px 30px 30px;
   border-radius: 6px;
@@ -144,6 +133,9 @@ export const DashboardWrapper = styled.div`
     -50%
   ); // Transforms the element back by half its width and height
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0);
 
   @media (min-width: 569px) and (max-width: 991px) {

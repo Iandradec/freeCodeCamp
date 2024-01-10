@@ -33,16 +33,19 @@ const Navbar = ({
   }
 
   return (
-    <NavbarWrapper
+    <NavbarWrapper className={addAllClasses.join(" ")}>
+      {/* <NavbarWrapper
       className={addAllClasses.join(" ")}
       style={{ border: "3px solid red" }}
-    >
-      {" "}
+    ></NavbarWrapper>
+      {" "} */}
       {/* // Añade un borde grueso rojo para delimitar el área. */}
-      <Container style={{ border: "2px solid yellow" }}>
+      <Container>
+        {/* <Container style={{ border: "2px solid yellow" }}></Container> */}
         {/* Muestra el logo y el componente de búsqueda si la búsqueda es visible */}
         {logo || searchVisibility ? (
-          <LogoArea style={{ border: "2px solid blue" }}>
+          <LogoArea >
+            {/* <LogoArea style={{ border: "2px solid blue" }}></LogoArea> */}
             {logo}
             {/* Oculta el componente de búsqueda en la página de inicio si searchVisibility es falso
             {!searchVisibility && location.pathname === "/"
@@ -50,7 +53,8 @@ const Navbar = ({
               : searchComponent} */}
           </LogoArea>
         ) : null}
-        <MenuArea style={{ border: "2px solid white" }}>
+        <MenuArea>
+          {/* <MenuArea style={{ border: "2px solid white" }}></MenuArea> */}
           {/* Muestra el menú principal si navMenu está presente */}
           {navMenu && (
             <MenuWrapper className="main_menu">{navMenu}</MenuWrapper>
