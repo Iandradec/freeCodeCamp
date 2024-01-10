@@ -18,52 +18,40 @@ const Navbar = ({
   profileMenu,
   isLogin,
   headerType,
-  // searchComponent,
+  searchComponent,
   location,
   searchVisibility,
 }) => {
   const addAllClasses = ["navbar"];
-  // Agrega clases adicionales a la Navbar si se proporcionan.
   if (className) {
     addAllClasses.push(className);
   }
-  // Agrega una clase en función del tipo de cabecera.
   if (headerType) {
     addAllClasses.push(`is_${headerType}`);
   }
 
   return (
-    <NavbarWrapper
-      className={addAllClasses.join(" ")}
-      style={{ border: "3px solid red" }}
-    >
-      {" "}
-      {/* // Añade un borde grueso rojo para delimitar el área. */}
-      <Container style={{ border: "2px solid yellow" }}>
-        {/* Muestra el logo y el componente de búsqueda si la búsqueda es visible */}
+    <NavbarWrapper className={addAllClasses.join(" ")}>
+      <Container>
         {logo || searchVisibility ? (
-          <LogoArea style={{ border: "2px solid blue" }}>
+          <LogoArea>
             {logo}
-            {/* Oculta el componente de búsqueda en la página de inicio si searchVisibility es falso
             {!searchVisibility && location.pathname === "/"
               ? null
-              : searchComponent} */}
+              : searchComponent}
           </LogoArea>
         ) : null}
-        <MenuArea style={{ border: "2px solid white" }}>
-          {/* Muestra el menú principal si navMenu está presente */}
+        <MenuArea>
           {navMenu && (
             <MenuWrapper className="main_menu">{navMenu}</MenuWrapper>
           )}
-          {/* Muestra el menú de perfil si el usuario está logueado, de lo contrario muestra el menú de autenticación 
-          Si comento no muestra los botones de sign-in y ssing-out, sobreescribe lo que esta en authMenu.js*/}
-          {/* {isLogin && avatar ? (
+          {isLogin && avatar ? (
             <AvatarWrapper>{profileMenu}</AvatarWrapper>
           ) : (
             authMenu && (
               <AuthWrapper className="auth_menu">{authMenu}</AuthWrapper>
             )
-          )} */}
+          )}
         </MenuArea>
       </Container>
     </NavbarWrapper>
