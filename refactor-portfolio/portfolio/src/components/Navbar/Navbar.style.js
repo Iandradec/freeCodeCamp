@@ -7,11 +7,13 @@ const NavbarWrapper = styled.nav`
   width: 100%;
   // padding: 0 25px;
   padding: 0 370px;
-  min-height: 82px;
+  // min-height: 82px;
+  max-height: 60px;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid ${themeGet("border.3", "#E6E6E6")};
   background-color: ${themeGet("color.1", "#ffffff")};
+
   @media (min-width: 991px) {
     display: flex;
   }
