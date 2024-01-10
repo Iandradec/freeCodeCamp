@@ -20,7 +20,6 @@ import {
 } from 'settings/constant';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
-// import DownloadButton from './Header/Download';
 const { Content } = LayoutWrapper;
 
 export default function Layout() {
@@ -29,7 +28,6 @@ export default function Layout() {
   const singlePageUrlFromConst = SINGLE_POST_PAGE.split('/');
   const singlePageUrlFormLocation = location.pathname.split('/');
 
-// se usa como un componente de layout para envolver otras páginas.
   return (
     <LayoutProvider>
       {location.pathname === LOGIN_PAGE ||
