@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
-import { useLocation } from "react-router-dom";
-import Sticky from "react-stickynode";
+import { useLocation } from "react-router-dom"; // Hook para acceder a la ruta actual.
+import Sticky from "react-stickynode"; // Componente para hacer que el Header sea pegajoso.
 import { IoIosClose } from "react-icons/io";
 import { Button, Drawer } from "antd";
 import Logo from "components/UI/Logo/Logo";
@@ -47,7 +47,9 @@ export default function Header() {
   const sidebarHandler = () => {
     setState(!state);
   };
-  const headerType = location.pathname === "/" ? "transparent" : "default";
+  // para hacer trasnparente por default en todas las paginas:
+  // const headerType = location.pathname === "/" ? "transparent" : "default";
+  const headerType = "transparent";
 
   return (
     <HeaderWrapper>
@@ -57,11 +59,11 @@ export default function Header() {
         activeClass="isHeaderSticky"
       >
         {width > 991 ? (
-          <Navbar 
+          <Navbar
             logo={
               <>
                 {headerType === "transparent" && <LogoIcon />}
-                <Logo 
+                <Logo
                   withLink
                   linkTo="/"
                   src="/images/logo-alt.svg"
@@ -80,6 +82,7 @@ export default function Header() {
             searchVisibility={searchVisibility}
           />
         ) : (
+          // termina aqui para web
           <MobileNavbar className={headerType}>
             <LogoArea>
               <>

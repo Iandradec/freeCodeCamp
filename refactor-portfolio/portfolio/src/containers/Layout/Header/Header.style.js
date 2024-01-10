@@ -84,6 +84,9 @@ const HeaderWrapper = styled.header`
       nav {
         &.is_transparent {
           background-color: ${themeGet("color.1", "#ffffff")};
+          // background-color: #D3D3D3 !important;
+          // background-color: rgb(46, 46, 46);
+
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
 
           > div > div {
