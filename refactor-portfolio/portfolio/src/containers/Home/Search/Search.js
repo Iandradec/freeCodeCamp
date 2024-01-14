@@ -38,7 +38,7 @@ const HoverButton = ({ href, download, children }) => {
         letterSpacing: "3",
         fontSize: "16px", // Tamaño de fuente
         font: "Lora",
-        // Añade aquí cualquier otro estilo que necesites
+        // OTROS ESTILOS
         //  borderRadius: "30px", // bordes redondeados
         //       backgroundColor: "transparent", // fondo transparente
         //       color: "white", // texto blanco
@@ -48,8 +48,6 @@ const HoverButton = ({ href, download, children }) => {
         //       letterSpacing: "3",
         //       fontSize: "16px", // Tamaño de fuente
         //       lineHeight: "3",
-
-        //       font: "Lora",
       }}
     >
       {children}
@@ -84,7 +82,7 @@ const SearchArea = ({ searchTitleStyle, searchDescriptionStyle }) => {
             style={{
               marginTop: "10px",
               marginBottom: "50px",
-              fontWeight: "700",
+              // fontWeight: "700",
             }}
             {...searchTitleStyle} // Aplica estilos personalizados al título
             content="Hi, This is Ivan Andrade C."
@@ -100,33 +98,7 @@ const SearchArea = ({ searchTitleStyle, searchDescriptionStyle }) => {
           >
             My resume
           </HoverButton>
-          {/* <Button
-            type="primary"
-            href="/images/profile/CV_IVAN_ANDRADE_CASTANEDA_2023_INGLES.pdf"
-            download="CV_Ivan_Andrade_Castaneda_2023_Ingles.pdf"
-            style={{
-              // textSizeAdjust: "100%",
-              borderRadius: "30px", // bordes redondeados
-              backgroundColor: "transparent", // fondo transparente
-              color: "white", // texto blanco
-              border: "1px solid white", // borde blanco
-              padding: "45px", // algo de padding
-              textAlign: "inherit",
-              letterSpacing: "3",
-              fontSize: "16px", // Tamaño de fuente
-              lineHeight: "3",
 
-              font: "Lora",
-              // alignItems: "center", // Centra verticalmente el contenido del botón
-              // justifyContent: "center", // Centra horizontalmente el contenido del botón
-              // height: "40px", // Altura específica del botón si es necesario
-
-              // margin: "10px 10px 10px 10px",
-              // Añade aquí cualquier otro estilo que necesites
-            }}
-          >
-            My resume
-          </Button> */}
           {/* // SearchForm: Componente de formulario de búsqueda
           <SearchForm /> */}
         </DashboardWrapper>
@@ -157,12 +129,13 @@ SearchArea.defaultProps = {
     // color: "#2C2C2C",
     // color: "#06488E",
     fontSize: ["20px", "24px", "50px"],
-    fontFamily: "Lora",
+    // fontFamily: "Lora",
+    fontFamily: "Thin 100",
     textAlign: "center",
     // fontWeight: "700",
     // lineHeight: "1px",
     lineHeight: ["28px", "30px", "30px"],
-    fontStyle: "bold",
+    // fontStyle: "bold",
     mb: "9px",
   },
   searchDescriptionStyle: {

@@ -7,7 +7,7 @@ const Container = ({ children, className, fullWidth, noGutter, fluid }) => {
   // Renderiza el ContainerWrapper pasando las props y envolviendo los children
   return (
     // <ContainerWrapper style={{ border: "2px solid green" }}
-    <ContainerWrapper
+    <ContainerWrapper style={{ border: "2px solid green" }}
       className={className} // Permite personalizar la clase CSS
       fullWidth={fullWidth} // Controla si el contenedor debe ocupar todo el ancho
       noGutter={noGutter} // Controla si el contenedor debe tener padding o no

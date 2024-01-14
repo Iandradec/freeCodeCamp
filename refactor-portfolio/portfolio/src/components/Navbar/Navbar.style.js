@@ -6,8 +6,9 @@ const NavbarWrapper = styled.nav`
   display: none;
   width: 100%;
   // padding: 0 25px;
-  padding: 0 370px;
+  padding: 0 360px;
   // min-height: 82px;
+  // para hacerla mas fina
   max-height: 60px;
   align-items: center;
   justify-content: space-between;
@@ -58,6 +59,8 @@ const NavbarWrapper = styled.nav`
 export const Container = styled.div`
   max-width: 1920px;
   width: 100%;
+  // para hacer mas fino el menu y que coincida con el navbar
+  max-height: 60px;
   margin: 0 auto;
   @media (min-width: 991px) {
     display: flex;
@@ -70,6 +73,7 @@ export const LogoArea = styled.div`
   display: flex;
   align-items: center;
   max-width: 650px;
+
   width: 100%;
   > a {
     margin-right: 27px;
@@ -79,6 +83,10 @@ export const LogoArea = styled.div`
 export const MenuArea = styled.div`
   display: flex;
   align-items: center;
+  // para hacer mas fino el menu y que coincida con el navbar
+  max-height: 60px;
+  font-weight: 1000;
+  font-size: 12px;
 `;
 
 export const AvatarWrapper = styled.div`
@@ -172,14 +180,18 @@ export const MenuWrapper = styled.div`
     border: 0;
     background-color: transparent;
     li {
-      margin: 0 14px;
+      margin: 0 10px;
       padding: 0;
       height: auto;
       margin-bottom: 0 !important;
       color: ${themeGet("text.0", "#2C2C2C")};
-      font-size: 15px;
+      // font-size: 15px;
+      font-size: 12px;
+      // font-family: "Thin 100";
+      // fontFamily: "Thin 100";
       line-height: 18px;
-      font-weight: 400;
+      // font-weight: 400;
+      font-weight: 1000;
       transition: color 0.2s ease-in-out;
       @media (max-width: 1200px) {
         margin: 0 10px;

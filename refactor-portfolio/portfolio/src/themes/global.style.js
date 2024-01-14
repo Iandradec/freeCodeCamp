@@ -41,6 +41,8 @@ const GlobalStyle = createGlobalStyle`
   span,
   div {
     font-family: 'Lato', sans-serif;
+    // font-family: 'Oxygen';
+    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
